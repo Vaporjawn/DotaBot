@@ -4,8 +4,8 @@ import requests
 OPEN_DOTA_URL = 'https://api.opendota.com/api/'
 
 
-def get_data(api_access_path, player_id):
-    url = OPEN_DOTA_URL + api_access_path + '/' + player_id
+def get_data(api_access_path, player_id, access_path_additional):
+    url = OPEN_DOTA_URL + api_access_path + '/' + player_id + '/' + access_path_additional
 
     game_data = requests.get(url)
 

@@ -5,7 +5,14 @@ def get_hero_id(hero_name):
 
     try:
         hero_id = hero_name_to_id[hero_name]
-        return hero_name + 's hero ID is : ' + str(hero_id)
+        return str(hero_id)
 
     except KeyError as e:
-        return "could not find her with name: " + hero_name
+        return "Could not find hero with name: " + hero_name
+
+
+def get_hero_name(hero_id):
+
+    for name, id in hero_name_to_id.items():
+        if hero_id == id:
+            return name
